@@ -1,27 +1,29 @@
 {
   "name": "e-baonmo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "type": "commonjs",
+  "workspaces": [
+    "web"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "cli": "node cli/index.js",
+    "test": "jest --runInBand",
+    "test:verbose": "jest --runInBand --verbose",
+    "web:dev": "npm --workspace web run dev",
+    "web:build": "npm --workspace web run build",
+    "web:start": "npm --workspace web run start"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.99.2",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "commander": "^12.1.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "jest": "^30.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true
   }
 }

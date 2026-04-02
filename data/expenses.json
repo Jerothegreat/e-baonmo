@@ -1,0 +1,21 @@
+{
+  "budget": {
+    "monthly": 5000,
+    "categories": {
+      "Food": 1500,
+      "Transport": 800,
+      "Bills": 1200,
+      "Entertainment": 500,
+      "Other": 1000
+    }
+  },
+  "expenses": [
+    {
+      "id": "2299e759-263b-466a-a99d-26ce3c97db2b",
+      "amount": 150,
+      "category": "Food",
+      "description": "Lunch",
+      "date": "2026-04-01"
+    }
+  ]
+}
